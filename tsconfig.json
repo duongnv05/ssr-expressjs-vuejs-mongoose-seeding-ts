@@ -1,0 +1,31 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "baseUrl": ".",
+    "lib": ["dom", "esnext"],
+    // this aligns with Vue's browser support
+    "target": "es5",
+    "experimentalDecorators": true,
+    // this enables stricter inference for data properties on `this`
+    "strict": true,
+    // if using webpack 2+ or rollup, to leverage tree shaking:
+    "module": "esnext",
+    "moduleResolution": "node"
+    // "jsx": "preserve"
+  },
+  "presets": [
+    "env"
+  ],
+  "plugins": [
+    "syntax-dynamic-import"
+  ],
+  "include": [
+    "*.ts",
+    // "store/*.ts",
+    "src/*.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue", "entry-server.js"
+  ]
+}
